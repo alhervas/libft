@@ -1,15 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memmove.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alhervas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alhervas <alhervas@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 18:11:10 by alhervas          #+#    #+#             */
-/*   Updated: 2023/01/22 18:25:30 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/01/30 12:59:35 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include<stdio.h>
+#include<string.h>
 
 void *ft_memmove(void *dest, const void *src, size_t len)
 {
@@ -27,10 +29,11 @@ void *ft_memmove(void *dest, const void *src, size_t len)
 }
 // int	main(void)
 // {
-// 	char cadena[] = "HOLAQUETAL";
-// 	char hola[] = "";
+// 	char cadena[] = "90ubqehrt";
+// 	char hola[] = "ehjws";
 
-// 	ft_memmove(hola, cadena, 3);
-// 	printf("%s", hola);
+// 	ft_memmove(hola, cadena, 32);
+// 	printf("%s\n", hola);
+// 	printf("%s", (char *)memmove(hola, cadena, 32));
 // 	return (0);
 // }
