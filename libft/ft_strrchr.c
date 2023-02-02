@@ -1,41 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alhervas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/22 18:29:07 by alhervas          #+#    #+#             */
-/*   Updated: 2023/01/22 19:00:54 by alhervas         ###   ########.fr       */
+/*   Created: 2023/02/02 20:24:26 by alhervas          #+#    #+#             */
+/*   Updated: 2023/02/02 20:24:29 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdio.h>
+#include<unistd.h>
 #include<string.h>
-unsigned int	ft_strlcpy(char *dest, const char *src, size_t size)
+int ft_strlen3(char *str)
 {
-	size_t	a;
-	size_t	l;
+    int a;
 
-	l = 0;
-	while(src[l] != '\0')
-		l++;
-	if(size != 0)
-	{
-		a = 0;
-		while(a < (size - 1) && a < l)
-		{
-			dest[a] = src[a];
-			a++;
-		}
-		dest[a] = '\0';
-	}
-	return (l);
+    a = 0;
+    while (str[a] != '\0')
+        a++;
+    return(a);
 }
-/* int main(void)
+char *ft_strrchr(const char *str, int c)
 {
-    char src[]= "holaaaaaa";
-    char dst[]="caracola";
-   // printf("%lu\n", strlcpy(dst, src, 13));
-    printf("%u\n", ft_strlcpy(dst, src, 13));
+	int a;
+
+	a = ft_strlen3((char *)str);
+	while (a >= 0)
+	{
+		if (str[a] == (char)c)
+		{
+			return((char *)&str[a]);
+		}
+		a--;
+	}
+
     return(0);
-} */
+}
+/* int	main()
+{
+	printf("%s\n", strrchr("BBRUMBRZUBM", 'B'));
+	printf("%s", ft_strrchr("BBRUMBRZUBM", 'B'));
+}
+ */

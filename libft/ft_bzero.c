@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   bzero.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alhervas <alhervas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: alhervas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 17:47:39 by alhervas          #+#    #+#             */
-/*   Updated: 2023/01/30 11:58:25 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/01/22 17:18:14 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,13 @@ void ft_bzero(void *b, size_t len)
 		a++;
 	}
 }
-// int main()
+// int	main(void)
 // {
 // 	char cadena[] = "HOhaaehTAL";
 
 // 	ft_bzero(cadena, 3);
+
 // 	printf("%s", cadena);
+
+// 	return (0);
 // }

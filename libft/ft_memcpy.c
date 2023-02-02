@@ -1,44 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   memcpy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alhervas <alhervas@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: alhervas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:19:46 by alhervas          #+#    #+#             */
-/*   Updated: 2023/01/30 14:43:44 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/01/22 18:10:37 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include<stdio.h>
-#include<string.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
-{
-	size_t a;
-	char *d;
-	const char *s;
-	
-	d = (char *)dest;
-	s = (char *)src;
-	a = 0;
-	while (dest == src || !n)
-		return(dest);
-	while (n > a)
-	{
-		d[a] = s[a];
-		a++;
-	}
-	return(d);
-}
-int	main(void)
-{
-	char src[] = "hola";
-	char dest[] = "adidioso";
+// void *ft_memcpy(void *dest, const void *src, size_t n)
+// {
+// 	int a;
 
-	// memcpy(dest, src, 3);
-	// printf("%s\n", dest);
-	ft_memcpy(dest, src, 3);
-	printf("%s", dest);
-	return (0);
-} 
+// 	a = 0;
+// 	while (n > a && src != '\0')
+// 	{
+// 		((unsigned char *)dest)[a] = ((unsigned char *)src)[a];
+// 		a++;
+// 	}
+// 	return (dest);
+// }
+// int	main(void)
+// {
+// 	char cadena[] = "HOLAQUETAL";
+// 	char hola[] = "f";
+
+// 	ft_memcpy(hola, cadena, 3);
+// 	printf("%s", hola);
+// 	return (0);
+// } 
