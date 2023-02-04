@@ -20,6 +20,7 @@ int ft_memcmp (const void *ptr1, const void *ptr2, size_t num);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 unsigned int	ft_strlcpy(char *dest, const char *src, size_t size);
 unsigned int	ft_strlcat(char *dest, const char *src, size_t size);
+int ft_atoi(const char *nptr);
 int	ft_strlen(char *str);
 int	ft_tolower(int a);
 int	ft_toupper(int a);

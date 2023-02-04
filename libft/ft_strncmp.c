@@ -1,15 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncmp.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alhervas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 16:54:15 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/03 16:54:19 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/04 11:48:08 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
+
 #include<stdlib.h>
 #include<string.h>
 int ft_strncmp(const char *str1, const char *str2, size_t n)
@@ -21,7 +21,7 @@ int ft_strncmp(const char *str1, const char *str2, size_t n)
     a = 0;
     s1 = (unsigned char *)str1;
     s2 = (unsigned char *)str2;
-    while((s1 != '\0' && a < n)|| (s2 != '\0' && a < n))
+    while((s1[a] != '\0' && a < n)|| (s2[a] != '\0' && a < n))
     {
         if (s1[a] == '\0' && s2[a] == '\0')
             return(0);

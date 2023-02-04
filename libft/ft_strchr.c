@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strchr.c                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alhervas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 19:12:49 by alhervas          #+#    #+#             */
-/*   Updated: 2023/01/22 20:22:19 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/04 11:46:58 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
+
 #include<unistd.h>
 #include<string.h>
 
 char *ft_strchr(const char *str, int c)
 {
 	int a;
-	int b;
 	char aux;
 
-	b = 0;
 	aux = c;
 	a = 0;
 	while ((char)str[a] != '\0')
 	{
 		if (((char *)str)[a] == aux)
 		{
-			while (((char *)str)[a] != '\0')
-			{
-				 return((char *)&str[a]);
-			}
+			return((char *)&str[a]);
 		}
 		a++;
 	}

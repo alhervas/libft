@@ -1,34 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcpy.c                                           :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alhervas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:19:46 by alhervas          #+#    #+#             */
-/*   Updated: 2023/01/22 18:10:37 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/04 11:45:16 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
 
-// void *ft_memcpy(void *dest, const void *src, size_t n)
-// {
-// 	int a;
+#include<string.h>
 
-// 	a = 0;
-// 	while (n > a && src != '\0')
-// 	{
-// 		((unsigned char *)dest)[a] = ((unsigned char *)src)[a];
-// 		a++;
-// 	}
-// 	return (dest);
-// }
+void *ft_memcpy(void *dest, const void *src, size_t n)
+{
+	size_t a;
+	char *d;
+	const char *s;
+	
+	d = (char *)dest;
+	s = (char *)src;
+	a = 0;
+	if (dest == src || !n)
+		return(dest);
+	while (n > a)
+	{
+		d[a] = s[a];
+		a++;
+	}
+	return(d);
+}
 // int	main(void)
 // {
-// 	char cadena[] = "HOLAQUETAL";
-// 	char hola[] = "f";
+// 	char dest[100] = "holaaaaa";
+// 	char src[10] = "que tal";
 
-// 	ft_memcpy(hola, cadena, 3);
-// 	printf("%s", hola);
+// 	memcpy(dest, src, 10);
+// 	printf("%s\n", dest);
+// 	// ft_memcpy(dest + 8, src, 10);
+// 	// printf("%s", dest);
 // 	return (0);
 // } 

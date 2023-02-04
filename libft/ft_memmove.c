@@ -1,36 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memmove.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alhervas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 18:11:10 by alhervas          #+#    #+#             */
-/*   Updated: 2023/01/22 18:25:30 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/04 11:44:56 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
 
-void *ft_memmove(void *dest, const void *src, size_t len)
+#include<string.h>
+#include<stdlib.h>
+
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t a;
-	unsigned char *temp;
+	char *d;
+	char *s;
 
-	a = 0;
-	temp = (unsigned char *)src;
-	while (a < len)
+
+	d = (char *)dest;
+	s = (char *)src;
+	if(d < s)
 	{
-		((unsigned char *)dest)[a] = temp[a];
-		a++;
+		while (n--)
+			*d++ = *s++;
 	}
-	return (0);
+	else if(d > s)
+	{
+		d += n;
+		s += n;
+		while (n--)
+			*--d = *--s;
+	}
+	return(dest);
 }
 // int	main(void)
 // {
-// 	char cadena[] = "HOLAQUETAL";
-// 	char hola[] = "";
+// 	char dest[] = "holaaaaa";
+// 	char src[] = "que tal";
 
-// 	ft_memmove(hola, cadena, 3);
-// 	printf("%s", hola);
+// 	// memmove(dest, src, 5);
+// 	// printf("%s\n", dest);
+// 	ft_memmove(dest, src, 5);
+// 	printf("%s", dest);
 // 	return (0);
-// }
+// } 
