@@ -23,8 +23,8 @@ void *ft_calloc(size_t nmemb, size_t size)
     ft_bzero(dest, a);
     return(dest);
 }
-int main()
+/* int main()
 {
     printf("%s\n", (char *)ft_calloc(12, 4));
     printf("%s\n", (char *)calloc(12, 4));
-}
+} */

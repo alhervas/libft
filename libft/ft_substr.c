@@ -11,28 +11,34 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *s1;
     char *s2;
     size_t a;
     size_t p;
+    size_t len1;
 
-    s1 = (char *)s;
-    if (!s || !(s2 = /* (char *) */malloc(len) + 1))
-        return(0);
+    len1 = (size_t)ft_strlen((char *)s);
+    if (start >= len1)
+    {
+        s2 = malloc(sizeof(char));
+        *s2 = 0;
+        return (s2);
+    }
+    if (len > len1)
+		len = len1; 
+    s2 = malloc (len + 1);
+    if (!s2 || !s)
+        return(NULL);
     a = 0;
     p = start;
-    while(len > a && strlen(s1) > p)
-    {
-        s2[a] = s1[start];
-        a++;
-        p++;
-    }
+    while(s[p] && len > a && len1 > p)
+        s2[a++] = s[p++];
     s2[a] = '\0';
     return(s2);
 }
 /* int main()
 {
-    printf("%s\n", ft_substr("Hol que tal", 3, 5));
+    printf("%s\n", ft_substr("Hol que tal", 3, 500));
 } */

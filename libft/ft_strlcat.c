@@ -9,49 +9,39 @@
 /*   Updated: 2023/02/02 15:43:22 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
-#include<string.h>
-int ft_strlen2(char *dest)
-{
-    int a;
-    
-    a = 0;
-    while(dest[a] != '\0')
-        a++;
-    return(a);
-}
+
+#include "libft.h"
+
 unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 {
+	size_t	dest_len;
+	size_t	src_len;
 	size_t	a;
-	size_t	l;
-	unsigned int s;
-
-	s = ft_strlen2(dest);
-	l = ft_strlen2((char *)src);
+	size_t  j;
+ 	
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen((char *)src);
+	j = dest_len;
+	/*if(dest_len == 0 || size == 0)
+		return(src_len);*/
+	if(size <= dest_len)
+		return(size + src_len);
 	a = 0;
-	if(s >= size)
+	while(src[a] && size > j + 1)
 	{
-		if(size != 0)
-		{
-			while(a < (size - 1) && a < l)
-			{
-				dest[s + a] = src[a];
-				a++;
-			}
-			dest[s + a] = '\0';
-		}
-		return (l + size);
+		dest[j] = src[a];
+		a++;
+		j++;
 	}
-	return(0);
+	dest[dest_len + a] = '\0';
+	return(src_len + dest_len);
 }
-	
 /* int main(void)
 {
-    char src[]= "emon";
-    char dst[]="comenepess";
- 	//printf("%lu\n", strlcat(dst, src, 15));
-    printf("%u\n", ft_strlcat(dst, src, 15));
+    char src[]= "the cake is a lie !\0I'm hidden lol\r\n";
+    char dst[]="there is no stars in the sky";
+ 	printf("%lu\n", strlcat(dst, src, strlen(src) + 4));
+   // printf("%u\n", ft_strlcat(dst, src, strlen(src) + 4));
 	printf("%s", dst);
     return(0);
-} */
-
+}  */

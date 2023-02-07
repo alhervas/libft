@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
-#include<string.h>
+#include "libft.h"
 
 char *ft_strchr(const char *str, int c)
 {
@@ -34,6 +33,6 @@ char *ft_strchr(const char *str, int c)
 }
 /* int	main()
 {
-	printf("%s\n", strchr("dthere is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0", '\0'));
-	printf("%s", ft_strchr("gthere is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0", '\0'));
-} */
+	printf("%s\n", strchr("dthere is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0", 'z'));
+	printf("%s", ft_strchr("gthere is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0", 'z'));
+}  */

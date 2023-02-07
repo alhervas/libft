@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: alhervas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 17:47:39 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/04 12:58:13 by alhervas         ###   ########.fr       */
+/*   Created: 2023/02/07 17:58:49 by alhervas          #+#    #+#             */
+/*   Updated: 2023/02/07 17:58:53 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *b, size_t len)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	size_t a;
+    int a;
+    int b;
 
-	a = 0;
-	while (len > a)
-	{
-		((char *)b)[a] = 0;
-		a++;
-	}
+    a = 0;
+    b = 0;
+    while(*set_[b])
+        a = ft_strtrim((char *)s1, (int)set[b++]);
+    if (a != NULL)
+    {
+        c = strlen(s1);
+    }
+
 }
-// int	main(void)
-// {
-// 	char cadena[] = "HOhaaehTAL";
 
-// 	ft_bzero(cadena, 3);
 
-// 	printf("%s", cadena);
-
-// 	return (0);
-// }
