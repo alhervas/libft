@@ -22,7 +22,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 unsigned int	ft_strlcpy(char *dest, const char *src, size_t size);
 unsigned int	ft_strlcat(char *dest, const char *src, size_t size);
 int ft_atoi(const char *nptr);
-int	ft_strlen(char *str);
+int	ft_strlen(const char *str);
 int	ft_tolower(int a);
 int	ft_toupper(int a);
 void *ft_calloc(size_t nmemb, size_t size);
@@ -37,6 +37,7 @@ void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
+char **ft_split(char const *s, char c);
 
 
 #endif
