@@ -22,8 +22,8 @@ unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen((char *)src);
 	j = dest_len;
-	/*if(dest_len == 0 || size == 0)
-		return(src_len);*/
+/* 	if(dest_len == 0 || size == 0)
+		return(src_len); */
 	if(size <= dest_len)
 		return(size + src_len);
 	a = 0;

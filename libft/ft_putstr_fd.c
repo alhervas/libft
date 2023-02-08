@@ -1,43 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alhervas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/07 13:51:46 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/07 13:51:50 by alhervas         ###   ########.fr       */
+/*   Created: 2023/02/08 19:25:47 by alhervas          #+#    #+#             */
+/*   Updated: 2023/02/08 19:25:48 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+void ft_putstr_fd(char *s, int fd)
 {
-    char *s;
-    int a;
-    int b;
+    int i;
 
-    a = 0;
-    b = 0;
-    s = malloc(ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1);
-    if(!s)
-        return(0);
-    while(s1[a])
+    i = 0;
+    while(*s)
     {
-        s[a] = s1[a];
-        a++;
+        write(fd, s, 1);
+        s++;
     }
-    while(s2[b])
-    {
-        s[a] = s2[b];
-        b++;
-        a++;
-    }
-    s[a] = '\0';
-    return(s);
 }
-/* int main()
-{
-    printf("%s", ft_strjoin("hola", " que tal"));
-} */
