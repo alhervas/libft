@@ -6,7 +6,7 @@
 /*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 18:29:07 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/04 12:59:49 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/13 20:16:44 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ unsigned int	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	l;
 
 	l = 0;
-	while(src[l] != '\0')
+	while (src[l] != '\0')
 		l++;
-	if(size != 0)
+	if (size != 0)
 	{
 		a = 0;
-		while(a < (size - 1) && a < l)
+		while (a < (size - 1) && a < l)
 		{
 			dest[a] = src[a];
 			a++;
@@ -34,9 +34,9 @@ unsigned int	ft_strlcpy(char *dest, const char *src, size_t size)
 }
 /* int main(void)
 {
-    char src[]= "holaaaaaa";
-    char dst[]="caracola";
+	char src[]= "holaaaaaa";
+	char dst[]="caracola";
    // printf("%lu\n", strlcpy(dst, src, 13));
-    printf("%u\n", ft_strlcpy(dst, src, 13));
-    return(0);
+	printf("%u\n", ft_strlcpy(dst, src, 13));
+	return(0);
 } */

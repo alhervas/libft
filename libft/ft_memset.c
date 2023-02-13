@@ -6,15 +6,15 @@
 /*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 16:44:42 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/04 12:59:39 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/13 20:15:53 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t a;
+	size_t	a;
 
 	a = 0;
 	while (len > a)

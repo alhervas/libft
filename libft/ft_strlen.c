@@ -6,7 +6,7 @@
 /*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 19:04:14 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/04 12:59:56 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/13 20:16:46 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_strlen(const char *str)
 {
-	int a;
+	int	a;
 
 	a = 0;
 	while (str[a] != '\0')
 		a++;
 	return (a);
 }
-// int	main()
+// int	main(void)
 // {
 // 	printf("%d", ft_strlen("gepe"));
 // }

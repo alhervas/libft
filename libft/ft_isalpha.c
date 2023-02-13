@@ -6,7 +6,7 @@
 /*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:39:03 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/04 12:58:32 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/13 20:14:58 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_isalpha(int a)
 {
 	if ((a >= 'a' && a <= 'z') ||
-			(a >= 'A' && a <= 'Z'))
-		return(1);
+		(a >= 'A' && a <= 'Z'))
+		return (1);
 	return (0);
 }
 // int main()

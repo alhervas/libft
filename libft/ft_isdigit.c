@@ -6,7 +6,7 @@
 /*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 18:09:39 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/04 12:58:51 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/13 20:15:04 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_isdigit(int a)
 		return (1);
 	return (0);
 }
-// int	main()
+// int	main(void)
 // {
 // 	printf("%d", ft_isdigit('3'));
 // }
