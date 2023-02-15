@@ -6,7 +6,7 @@
 /*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 21:23:19 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/13 20:16:12 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/14 18:50:27 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_strdup(const char *s)
 	char	*s2;
 
 	s1 = (char *)s;
-	if (!(s2 = (char *)malloc(ft_strlen(s1) + 1)))
+	s2 = (char *)malloc(ft_strlen(s1) + 1);
+	if (!(s2))
 		return (0);
 	ft_memcpy(s2, s1, ft_strlen(s1) + 1);
 	return (s2);

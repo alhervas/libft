@@ -6,7 +6,7 @@
 /*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:00:38 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/13 20:21:34 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/14 18:44:10 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,17 +74,15 @@ char	*ft_itoa(int n)
 		return (0);
 	if (n < 0)
 	{
-		result[a] = '-';
+		result[a++] = '-';
 		z *= -1;
-		a++;
 	}
 	n = 0;
 	while (exp > 0)
 	{
-		result[a] = ((z / exp) - n) + 48;
+		result[a++] = ((z / exp) - n) + 48;
 		n = (z / exp) * 10;
 		exp /= 10;
-		a++;
 	}
 	result[a] = '\0';
 	return (result);

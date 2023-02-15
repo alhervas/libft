@@ -6,7 +6,7 @@
 /*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:48:55 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/13 20:16:20 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/14 18:47:47 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int i;
-	unsigned int i2;
+	unsigned int	i;
+	unsigned int	i2;
 
 	i = 0;
 	i2 = 0;

@@ -6,7 +6,7 @@
 /*   By: alhervas <alhervas@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 13:05:53 by alhervas          #+#    #+#             */
-/*   Updated: 2023/02/13 20:14:46 by alhervas         ###   ########.fr       */
+/*   Updated: 2023/02/14 18:51:52 by alhervas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	char	*dest;
 
 	a = nmemb * size;
-	if (!(dest = malloc(a)))
+	dest = malloc(a);
+	if (!(dest))
 		return (0);
 	ft_bzero(dest, a);
 	return (dest);
