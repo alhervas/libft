@@ -20,12 +20,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	b = 0;
 	if (s1 == NULL || set == NULL)
-		return (NULL);
-	while (ft_strchr(set, s1[b]) && s1[b] != '\0')
+		return (0);
+	while (s1[b] && ft_strchr(set, s1[b]))
 		b++;
-	l = ft_strlen((char *)s1) - 1;
-	while (ft_strchr(set, s1[l]) && s1[l] != '\0')
+	l = ft_strlen(s1) - 1;
+	while (s1[b] && ft_strchr(set, s1[l]))
 		l--;
 	result = ft_substr(s1, b, (l - b) + 1);
 	return (result);
 }
+/* int main()
+{
+
+	char *blabla = ft_strtrim("", "");
+	printf("%s\n", blabla);
+	return 0;
+} */
