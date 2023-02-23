@@ -14,27 +14,27 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	a;
-	size_t	b;
+	size_t	i;
+	size_t	j;
 
-	a = 0;
+	i = 0;
 	if (*needle == '\0' || needle == NULL)
 		return ((char *)haystack);
-	while (a < len && haystack[a] != '\0')
+	while (i < len && haystack[i] != '\0')
 	{
-		b = 0;
-		while (needle[b] == haystack[a + b] && a + b < len)
+		j = 0;
+		while (needle[j] == haystack[i + j] && i + j < len)
 		{
-			if (needle[b + 1] == '\0')
-				return ((char *)haystack + a);
-			b++;
+			if (needle[j + 1] == '\0')
+				return ((char *)haystack + i);
+			j++;
 		}
-		a++;
+		i++;
 	}
 	return (NULL);
 }
 /* int main()
 {
-    printf("%s\n", strnstr("abc", "abcdef", -1));
-    printf("%s", ft_strnstr("abc", "abcdef", -1));
+    printf("%s\n", strnstr("abcdef", "cd", 5));
+    printf("%s", ft_strnstr("abcdef", "cd", 5));
 } */

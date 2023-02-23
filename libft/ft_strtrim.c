@@ -14,19 +14,19 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		b;
-	int		l;
+	int		i;
+	int		len;
 	char	*result;
 
-	b = 0;
+	i = 0;
 	if (s1 == NULL || set == NULL)
 		return (0);
-	while (s1[b] && ft_strchr(set, s1[b]))
-		b++;
-	l = ft_strlen(s1) - 1;
-	while (s1[b] && ft_strchr(set, s1[l]))
-		l--;
-	result = ft_substr(s1, b, (l - b) + 1);
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	len = ft_strlen(s1) - 1;
+	while (s1[i] && ft_strchr(set, s1[len]))
+		len--;
+	result = ft_substr(s1, i, (len - i) + 1);
 	return (result);
 }
 /* int main()

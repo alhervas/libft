@@ -10,12 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-include "libft.h"
+#include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+/* t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list aux;
+	t_list	*aux;
+	t_list	*result;
 
-	aux = ft_lstiteri(lst, f);
-	return (aux);
-}
+	aux = lst;
+	result = malloc(sizeof(t_list));
+	if (!(result))
+		return (0);
+	while (aux)
+	{
+		result->content = f(aux->content);
+		result->next = malloc(sizeof(t_list));
+		if	(!(result))
+			ft_lstclear(&aux, del);
+		aux = aux->next;
+		result = result->next;
+	}
+	return (result);
+} */

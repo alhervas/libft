@@ -10,15 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "libft.h"
- t_list *ft_lstnew(void *content)
- {
-	t_list *hola;
+#include "libft.h"
 
-	hola = malloc(sizeof(t_list));
-	if(!(hola))
-		return(NULL);
-	hola->content = content;
-	hola->next = NULL;
-	return(hola);
- }
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*aux;
+
+	aux = malloc(sizeof(t_list));
+	if (!(aux))
+		return (NULL);
+	aux->content = content;
+	aux->next = NULL;
+	return (aux);
+}

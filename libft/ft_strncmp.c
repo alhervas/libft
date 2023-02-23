@@ -14,23 +14,23 @@
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	size_t			a;
+	size_t			i;
 	unsigned char	*s1;
 	unsigned char	*s2;
 
-	a = 0;
+	i = 0;
 	s1 = (unsigned char *)str1;
 	s2 = (unsigned char *)str2;
-	while ((s1[a] != '\0' && a < n) || (s2[a] != '\0' && a < n))
+	while ((s1[i] != '\0' && i < n) || (s2[i] != '\0' && i < n))
 	{
-		if (s1[a] == '\0' && s2[a] == '\0')
+		if (s1[i] == '\0' && s2[i] == '\0')
 			return (0);
-		if (s1[a] > s2[a])
+		if (s1[i] > s2[i])
 			return (1);
-		else if (s1[a] < s2[a])
+		else if (s1[i] < s2[i])
 			return (-1);
 		else
-			a++;
+			i++;
 	}
 	return (0);
 }

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-static int		numstring(char const *s1, char c)
+/* static int		numstring(char const *s1, char c)
 {
 	int	comp;
 	int	cles;
@@ -95,4 +95,4 @@ char			**ft_split(char const *s, char c)
 	if (dst == NULL)
 		return (NULL);
 	return (affect(s, dst, c, l));
-}
+} */

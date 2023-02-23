@@ -16,7 +16,7 @@ unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	dest_len;
 	size_t	src_len;
-	size_t	a;
+	size_t	i;
 	size_t	j;
 
 	dest_len = ft_strlen(dest);
@@ -24,14 +24,14 @@ unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 	j = dest_len;
 	if (size <= dest_len)
 		return (size + src_len);
-	a = 0;
-	while (src[a] && size > j + 1)
+	i = 0;
+	while (src[i] && size > j + 1)
 	{
-		dest[j] = src[a];
-		a++;
+		dest[j] = src[i];
+		i++;
 		j++;
 	}
-	dest[dest_len + a] = '\0';
+	dest[dest_len + i] = '\0';
 	return (src_len + dest_len);
 }
 /* int main(void)

@@ -14,10 +14,10 @@
 
 int	digits(int n)
 {
-	int	c;
+	int	dig;
 	int	numb;
 
-	c = 0;
+	dig = 0;
 	if (n == 0)
 		return (1);
 	if (n == -2147483648)
@@ -25,23 +25,23 @@ int	digits(int n)
 	if (n < 0)
 	{
 		n *= -1;
-		c++;
+		dig++;
 	}
 	numb = n;
 	while (numb > 0)
 	{
 		numb /= 10;
-		c++;
+		dig++;
 	}
-	return (c);
+	return (dig);
 }
 
 int	expon(int n)
 {
-	int	c;
+	int	exponent;
 	int	numb;
 
-	c = 1;
+	exponent = 1;
 	if (n == 0)
 		return (1);
 	if (n == -2147483648)
@@ -54,37 +54,37 @@ int	expon(int n)
 	while (numb > 9)
 	{
 		numb /= 10;
-		c *= 10;
+		exponent *= 10;
 	}
-	return (c);
+	return (exponent);
 }
 
 char	*ft_itoa(int n)
 {
-	int			a;
+	int			i;
 	char		*result;
-	int			exp;
-	long int	z;
+	int			exponent;
+	long int	lngi;
 
-	a = 0;
-	z = (long int)n;
-	exp = expon(n);
+	i = 0;
+	lngi = (long int)n;
+	exponent = expon(n);
 	result = malloc(digits(n) + 1);
 	if (!result)
 		return (0);
 	if (n < 0)
 	{
-		result[a++] = '-';
-		z *= -1;
+		result[i++] = '-';
+		lngi *= -1;
 	}
 	n = 0;
-	while (exp > 0)
+	while (exponent > 0)
 	{
-		result[a++] = ((z / exp) - n) + 48;
-		n = (z / exp) * 10;
-		exp /= 10;
+		result[i++] = ((lngi / exponent) - n) + 48;
+		n = (lngi / exponent) * 10;
+		exponent /= 10;
 	}
-	result[a] = '\0';
+	result[i] = '\0';
 	return (result);
 }
 /* int main()
